@@ -1,7 +1,8 @@
-export const songData = [
+export const songs = [
     {
         id: 1,
         genre: "R&B",
+        album: "Brian McKnight",
         songTitle: "I Can't Go for That",
         artist: "Brian McKnight",
         userId: 1,    
@@ -9,13 +10,15 @@ export const songData = [
     {
         id: 2,
         genre: "Soul",
-        songTitle: "If This World Were Mine",
+        album: "Any Love",
+        songTitle: "Any Love",
         artist:"Luther Vandross",
         userId: 2,    
     },
     {
         id: 3,
         genre: "Soul",
+        album: "Rapture",
         songTitle: "Sweet Love",
         artist:"Anita Baker",
         userId: 3,    
@@ -23,6 +26,7 @@ export const songData = [
     {
         id: 4,
         genre: "Grunge",
+        album: "Nevermind",
         songTitle: "Smells Like Teen Spirit",
         artist:"Nirvana",
         userId: 4,    
@@ -30,6 +34,7 @@ export const songData = [
     {
         id: 5,
         genre: "Rock & Roll",
+        album: "Hometown",
         songTitle: "Born in the USA",
         artist:"Bruce Springsteen",
         userId: 5,    
@@ -37,6 +42,7 @@ export const songData = [
     {
         id: 6,
         genre: "Reggae",
+        album: "Greatest Hits",
         songTitle: "Buffalo Soldier",
         artist:"Bob Marley",
         userId: 6,    
@@ -44,6 +50,7 @@ export const songData = [
     {
         id: 7,
         genre: "Pop",
+        album: "...Baby One More Time",
         songTitle: "...Baby One More Time",
         artist:"Britney Spears",
         userId: 7,    
@@ -51,6 +58,7 @@ export const songData = [
     {
         id: 8,
         genre: "Classical",
+        album: "Composed 1788",
         songTitle: "Symphony No. 40",
         artist:"Mozart",
         userId: 8,    
@@ -58,6 +66,7 @@ export const songData = [
     {
         id: 9,
         genre: "Gospel",
+        album: "Hero",
         songTitle: "Imagine Me",
         artist:"Kirk Franklin",
         userId: 9,    
@@ -65,6 +74,7 @@ export const songData = [
     {
         id: 10,
         genre: "Country",
+        album: "Life Changes",
         songTitle: "Craving You",
         artist:"Thomas Rhett",
         userId: 10,    

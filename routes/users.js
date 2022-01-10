@@ -67,10 +67,10 @@ router.post("/login", async (req, res) => {
 });
 
 //* Get all users
-router.get("/", async (req, res) => {
+router.get("/", async (_req, res) => {
   try {
-    const users = await User.find();
-    return res.send(users);
+    const users = await Users.find();
+    return res.send();
   } catch (ex) {
     return res.status(500).send(`Internal Server Error: ${ex}`);
   }
