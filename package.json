@@ -4,7 +4,7 @@
   "description": "Backend app to upload files to MongoDB",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node index.js",
     "dev": "nodemon app.js"
   },
   "keywords": [],

@@ -85,7 +85,7 @@ app.get('/files', (_req,res) => {
 // @route GET / files/: filename
 // @desc Display all files in JSON
 app.get('/file/:filename', (_req,res) => {
-    gfs.files.findOne({filename: req.params.filename }, (err, file) => {
+    gfs.files.findOne({filename: req.params.filename }, (_err, file) => {
         // Check if file
         if(!file || file.length === 0) {
             return res.status(404).json({
