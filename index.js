@@ -1,5 +1,7 @@
 const connectDb = require("./db/db");
-const songsRouter = require("./routes/");
+const userRouter = require("./routes/users");
+const musicRouter = require("./routes/music");
+const Router = require("./routes/users");
 const express = require("express");
 const cors = require("cors");
 const app = express();
@@ -14,9 +16,10 @@ connectDb();
 
 app.use(cors());
 app.use(express.json());
-app.use(`/api/songs`, songsRouter);
+app.use(`/api/users`, userRouter);
+app.use(`/api/music`, musicRouter);
 
-const port = process.env.PORT || 3200;
+const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`Server started on port: ${port}`);
 });

@@ -21,23 +21,17 @@ router.post("/register", async (req, res) => {
 
     const salt = await bcrypt.genSalt(10);
     user = new User({
-      name: req.body.name,
+
       email: req.body.email,
       password: await bcrypt.hash(req.body.password, salt),
-      isAdmin: req.body.isAdmin,
+
     });
 
     await user.save();
     const token = user.generateAuthToken();
     return res
-      .header("x-auth-token", token)
-      .header("access-control-expose-headers", "x-auth-token")
-      .send({
-        _id: user._id,
-        name: user.name,
-        email: user.email,
-        isAdmin: user.isAdmin,
-      });
+
+      .send(token);
   } catch (ex) {
     return res.status(500).send(`Internal Server Error: ${ex}`);
   }
@@ -94,50 +88,50 @@ router.delete("/:userId", [auth, admin], async (req, res) => {
 //*Create a post for user
 router.post("/posts", [auth], async (req, res) => {
   try {
-      const user = await User.findById(req.user._id);
-      
-      let post = new Post(req.body);
-      const { error } = validatePost(req.body);
-      if (error) 
-          return res.status(400).send(error);
-      user.posts.push(post);
-      
-      await user.save();
-      return res.send(user);
-  }   catch (ex) {
-      return res.status(500).send(`Internal Server Error: ${ex}`)
+    const user = await User.findById(req.user._id);
+
+    let post = new Post(req.body);
+    const { error } = validatePost(req.body);
+    if (error)
+      return res.status(400).send(error);
+    user.posts.push(post);
+
+    await user.save();
+    return res.send(user);
+  } catch (ex) {
+    return res.status(500).send(`Internal Server Error: ${ex}`)
   }
 });
 
 //*Find all posts (created by David and Pascal)
 router.get("/posts/all", [auth], async (req, res) => {
   try {
-      const users = await User.find()
+    const users = await User.find()
 
-      let posts = []
-      users.map(user => posts.push({userId: user._id, posts: user.posts}));
+    let posts = []
+    users.map(user => posts.push({ userId: user._id, posts: user.posts }));
 
-      return res.send(posts);  
+    return res.send(posts);
 
-  } catch(ex) {
-      return res.status(500).send(`Internal Server Error: ${ex}`);
+  } catch (ex) {
+    return res.status(500).send(`Internal Server Error: ${ex}`);
   }
 });
 
 //*Adding likes and dislikes
 router.put("/:userId/posts/:postId", async (req, res) => {
   try {
-      const user = await User.findById(req.params.userId);
+    const user = await User.findById(req.params.userId);
 
-      let thePost = user.posts.id(req.params.postId);
+    let thePost = user.posts.id(req.params.postId);
 
-      thePost = {...thePost, ...req.body}
+    thePost = { ...thePost, ...req.body }
 
-      await user  .save()
+    await user.save()
 
-      return res.send(thePost);
-  }   catch (ex) {
-          return res.status(500).send(`Internal Server Error: ${ex}`)
+    return res.send(thePost);
+  } catch (ex) {
+    return res.status(500).send(`Internal Server Error: ${ex}`)
   }
 });
 
@@ -149,18 +143,18 @@ router.post("/:userId/posts/:postId/replies", [auth], async (req, res) => {
     let thePost = user.posts.id(req.params.postId);
 
     const reply = new Reply({
-          text: req.body.text,
-          likes: req.body.likes,
-          dislikes: req.body.dislikes
-      });
+      text: req.body.text,
+      likes: req.body.likes,
+      dislikes: req.body.dislikes
+    });
 
-      thePost.replies.push(reply);
+    thePost.replies.push(reply);
 
-      await user.save();
+    await user.save();
 
-      return res.send(thePost.replies);
+    return res.send(thePost.replies);
   } catch (ex) {
-      return res.status(500).send(`Internal Server Error: ${ex}`);
+    return res.status(500).send(`Internal Server Error: ${ex}`);
   }
 });
 
@@ -171,37 +165,37 @@ router.get('/current/:currentUserId', async (req, res) => {
 })
 
 //*Sending friend request
-router.get("/:userId/pendingFriends/:friendId",[auth], async (req, res) => {
-  
+router.get("/:userId/pendingFriends/:friendId", [auth], async (req, res) => {
+
   const user = await User.findById(req.params.friendId);
   user.pendingFriends.push(req.params.userId);
 
   await user.save()
-  return res.send(user.pendingFriends)   
+  return res.send(user.pendingFriends)
 })
 
 //*Sending friend request
-router.get("/:userId/pendingFriends/:friendId",[auth], async (req, res) => {
-  
+router.get("/:userId/pendingFriends/:friendId", [auth], async (req, res) => {
+
   const user = await User.findById(req.params.friendId);
   user.pendingFriends.push(req.params.userId);
 
   await user.save()
-  return res.send(user.pendingFriends)   
+  return res.send(user.pendingFriends)
 })
 
-router.get("/:yourId/acceptFriends/:userId",[auth], async(req, res)=>{
- const user = await User.findById(req.params.yourId);
- const indexOfFriend = user.pendingFriends.findIndex(e=>e===req.params.userId)
-user.pendingFriends.splice (indexOfFriend,1);
+router.get("/:yourId/acceptFriends/:userId", [auth], async (req, res) => {
+  const user = await User.findById(req.params.yourId);
+  const indexOfFriend = user.pendingFriends.findIndex(e => e === req.params.userId)
+  user.pendingFriends.splice(indexOfFriend, 1);
 
-user.acceptedFriends.push(req.params.userId);
-const friend = await User.findById(req.params.userId);
-friend.acceptedFriends.push(req.params.yourId);
+  user.acceptedFriends.push(req.params.userId);
+  const friend = await User.findById(req.params.userId);
+  friend.acceptedFriends.push(req.params.yourId);
 
-await user.save();
-await friend.save();
-return res.send([user,friend])
+  await user.save();
+  await friend.save();
+  return res.send([user, friend])
 })
 
 module.exports = router;

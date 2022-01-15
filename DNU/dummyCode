@@ -17,7 +17,7 @@
 // app.set('view engine', 'ejs');
 
 // // Mongo URI
-// const mongoURI = 'mongodb+srv://tay:databases@capstonefinal.1mfi7.mongodb.net/capstoneFinal?retryWrites=true&w=majority';
+// const mongoURI = "mongoURI": "mongodb+srv://tay:tay123@capstonefinal.1mfi7.mongodb.net/musicc_mixxer_database?retryWrites=true&w=majority",
 
 // // Create mongo connection
 // const conn = mongoose.createConnection(mongoURI);

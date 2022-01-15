@@ -5,12 +5,13 @@
   "main": "app.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.24.0",
     "bcrypt": "^5.0.1",
     "body-parser": "^1.19.1",
     "bootstrap": "^5.1.3",
@@ -30,5 +31,13 @@
   "devDependencies": {
     "eslint": "^7.27.0",
     "nodemon": "^2.0.15"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mon-TeSmith/musicc_mixxer_backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Mon-TeSmith/musicc_mixxer_backend/issues"
+  },
+  "homepage": "https://github.com/Mon-TeSmith/musicc_mixxer_backend#readme"
 }

@@ -5,8 +5,8 @@ const { validateSong } = require('./middleware/songs-validation');
 
 const app = express();
 
-app.listen(3000, function () {
-    console.log("Server started. Listening on port 3000.");
+app.listen(5000, function () {
+    console.log(`Server started on port: ${port}`);
 });
 
 app.get('/api/songs/:id', (req, res) => {

@@ -1,4 +1,6 @@
 {
     "mongoURI": "mongodb+srv://tay:tay123@capstonefinal.1mfi7.mongodb.net/musicc_mixxer_database?retryWrites=true&w=majority",
-    "JWT_SECRET": "davesSecret"
+    "JWT_SECRET": "davesSecret",
+    "client_id": "74f980804a4d4fb39c120780977ac92f",
+    "client_secret": "c3d106d9c906494ca74a5cc686fdfb16"
 }
