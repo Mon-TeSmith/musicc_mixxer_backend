@@ -1,0 +1,80 @@
+[    
+    {
+        "id": 1,
+        "name": "Michelle Bailey",
+        "services": "Engineer/Vocalist",
+        "company": "ZipCord Records",
+        "contact": "https://pureromance.com",
+        "daily-rate": "$225",
+        "hourly-rate": "$35"    
+    },
+    {
+        "id": 2,
+        "name": "Austin Chapline",
+        "services": "Music Producer",
+        "company": "Austin Chapline Productions",
+        "contact": "https://www.austinchaplineproductions.com/",
+        "rate": "Prices vary per track"          
+    },
+    {
+        "id": 3,
+        "name": "Mon'te Smith",
+        "services": "Producer/Engineer/BGV",
+        "company": "Just US Music Productions",
+        "contact": "just.us.productions615@gmail.com",
+        "rate": "$850",
+        "hourly-rate": "$150"           
+    },
+    {
+        "id": 4,
+        "name": "K'Miyah",
+        "services": "Vocalist/Video Model",
+        "contact": "https://www.instagram.com/kmiyah04/",
+        "daily-rate": "$800",
+        "hourly-rate": "$150"           
+    },
+    {
+        "id": 5,
+        "name": "Zachary Manno",
+        "services": "Producer/Engineer/Musician",
+        "company": "Zach Manno Music",
+        "contact": "www.zacharymanno.com",
+        "rate": "please contact for rates"          
+    },
+    {
+        "id": 6,
+        "name": "Denetra Smith",
+        "services": "Photographer/Professional Branding",
+        "company": "RCK Photography",
+        "contact": "RCKPhotography@gmail.com",
+        "daily-rate": "$1100",
+        "hourly-rate": "$350"          
+    },
+    {
+        "id": 7,
+        "name": "William Harris III",
+        "services": "Choreographer/Stylist",
+        "contact": "https://www.instagram.com/_williamthe3rd_/",
+        "company": "Styled by William",
+        "daily-rate":"$1500",
+        "hourly-rate": "$150"         
+    },
+    {
+        "id": 8,
+        "name": "Brendan Pinkett",
+        "services": "Choreographer/Dancer/Photographer",
+        "company": "BintheZone",
+        "contact": "brendanpinkett@gmail.com",
+        "daily-rate":"$500",
+        "hourly-rate": "$40"         
+    },
+    {
+        "id": 9,
+        "name": "Henry LaGrone",
+        "services": "Cinematographer/Video Editor",
+        "company": "Parkway Studios",
+        "contact": "info@parkway-studios.com",
+        "daily-rate": "$500",
+        "hourly-rate": "75"          
+    }  
+  ]

@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "services": "Audio Engineer"
+    },
+    {
+        "id": 2,
+        "services": "Music Producer"
+    },
+    {
+        "id": 3,
+        "services": "Vocalist/Background Vocals"
+    },
+    {
+        "id": 4,
+        "services": "Musician"
+    },
+    {
+        "id": 5,
+        "services": "Photographer"
+    },
+    {
+        "id": 6,
+        "services": "Video Model"
+    },
+    {
+        "id": 7,
+        "services": "Professional Branding"
+    },
+    {
+        "id": 8,
+        "services": "Video Choreographer"
+    },
+    {
+        "id": 9,
+        "services": "Stylist"
+    },
+    {
+        "id": 10,
+        "services": "Video Backup Dancer"
+    },
+    {
+        "id": 11,
+        "services": "Cinemotographer"
+    },
+    {
+        "id": 12,
+        "services": "Video Editor"
+    }
+
+]

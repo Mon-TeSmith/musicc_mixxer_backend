@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "email": "justusproductions@gmail.com",
+        "password": "justusproductions"
+    },
+    {
+        "id": 2,
+        "email": "zipcordrecords@gmail.com",
+        "password": "zipcordrecords"
+    },
+    {
+        "id": 3,
+        "email": "austinchapline@productions.com",
+        "password": "austinechapline"
+    },
+    {
+        "id": 4,
+        "email": "kmiyah@gmail.com",
+        "password": "kmiyah04"
+    },
+    {
+        "id": 5,
+        "email": "zachmanno@gmail.com",
+        "password": "zachmanno"
+    },
+    {
+        "id": 6,
+        "email": "rchphotography@gmail.com",
+        "password": "rckphotography"
+    },
+    {
+        "id": 7,
+        "email": "williamharris@gmail.com",
+        "password": "williamharris"
+    },
+    {
+        "id": 8,
+        "email": "brendanpinkett@gmail.com",
+        "password": "brendanpinkett"
+    },
+    {
+        "id": 9,
+        "email": "parkwaystudios@gmail.com",
+        "password": "parkwaystudios"
+    }
+]
